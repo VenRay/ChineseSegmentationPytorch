@@ -1,0 +1,21 @@
+输入：x.shape [128,50]
+vocab_num, embed_len = embed_mat.size() [3751,200]
+x = self.embed(x) [128,50,200] #[batchsize,channel,size]
+单项lstm [128,50,200]双向Lstm[128,50,400]
+
+数据集：PKU
+精度评价：eval.
+使用 accuracy_score
+分类准确率分数是指所有分类正确的百分比。
+
+nn.Embedding
+这是一个矩阵类，里面初始化了一个随机矩阵，矩阵的长是字典的大小，宽是用来表示字典中每个元素的属性向量
+rnn = nn.LSTM(10,20,2)
+#构建网络模型---输入矩阵特征数input_size、输出矩阵特征数hidden_size、层数num_layers
+损失函数:
+BCEWithLogitsLoss(reduction='sum')
+二分类用的交叉熵，用的时候需要在该层前面加上 Sigmoid 函数
+网络搭建:
+Linear 全连接层
+torch.nn.Linear(128, 10)
+
